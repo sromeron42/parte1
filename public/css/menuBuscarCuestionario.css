@@ -1,0 +1,243 @@
+#mainBuscarCuestionario {
+  width: 95%;
+  margin: 32px auto;
+  font-size: 1.7em;
+  display: flex;
+}
+
+#menuBuscarCuestionario {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  text-align: center;
+}
+
+#inputBuscarCuestionario form input {
+  font-size: 1.1em;
+  margin-left: 2%;
+  padding-left: 1%;
+  border: none;
+  border-bottom: 2px solid #4FC99C;
+  margin-bottom: 20px;
+  transition: 0.1s;
+  outline: none;
+}
+
+#inputBuscarCuestionario form button {
+  font-size: 1.1em;
+  padding: 0 20px;
+  border: none;
+  border-bottom: 2px solid #4FC99C;
+  margin-bottom: 20px;
+  transition: 0.1s;
+  outline: none;
+}
+
+#inputBuscarCuestionario input:focus {
+  border-bottom-color: #5AB131 !important;
+}
+
+.botonMenu {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-size: 1.2em;
+  background-color: none;
+  padding: 4px 10px;
+  text-decoration: none;
+  color: black;
+  border: 2px solid rgba(216, 221, 215, 0.83);
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: white;
+  border-top: none;
+  border-left: none;
+  transition: 0.2s;
+}
+
+.botonMenu:hover {
+  -webkit-box-shadow: 0 7px 4px #777;
+	-moz-box-shadow: 0 7px 4px #777;
+	box-shadow: 0 7px 4px #777;
+}
+
+#cuestionariosLista {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+#cuestionariosLista h1 {
+  margin-left: 1.7%;
+}
+
+.articuloCuestionario {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 2%;
+  background-color: rgba(216, 221, 215, 0.33);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+  border: 2px solid white;
+  transition: 0.2s;
+}
+
+.articuloCuestionario:hover {
+  border: 2px solid #5AB131;
+}
+
+.fotoCuestionario {
+  height: 74px;
+  width: 74px;
+  background-image: url("../imgs/fondoPunteado.jpg");
+  background-position: center;
+  border: 1px dotted grey;
+  border-radius: 40px;
+  margin-right: 10px;
+}
+
+.portadaCuestionario {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px dotted grey;
+  height: 74px;
+  width: 74px;
+}
+
+.portadaCuestionario img {
+  width: inherit;
+}
+
+.infoCuestionario {
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+  width: 50%;
+}
+
+.infoCuestionario a {
+  text-decoration: none;
+}
+
+.infoLista {
+  padding-left: 20px;
+}
+
+.borrarCuestionario {
+  border: none;
+  background-color: transparent;
+  font-size: 1.1em;
+  cursor: pointer;
+  outline: none;
+}
+
+.creadorCuestionario {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7em;
+  justify-content: center;
+  width: 30%;
+  /* background-color: green; */
+}
+
+.creadorCuestionario a {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.jugarCuestionario {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 20%;
+  /* background-color: yellow; */
+}
+
+.jugarCuestionario ion-icon {
+  font-size: 2em;
+  transition: 0.5s;
+  color: lightgrey;
+}
+
+.jugarCuestionario ion-icon:hover {
+  transform: rotate(360deg);
+  color: #5AB131;
+}
+
+@media (max-width: 830px) {
+  #mainBuscarCuestionario {
+    flex-direction: column;
+  }
+
+  #menuBuscarCuestionario {
+    width: 100%;
+  }
+
+  #menuBuscarCuestionario div {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+
+  #menuBuscarCuestionario div a {
+    justify-content: center;
+  }
+
+  #cuestionariosLista {
+    width: 100%;
+  }
+
+  .infoLista {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 636px) {
+  #cuestionarios {
+    flex-direction: row;
+  }
+
+  #cuestionariosLista .articuloCuestionario {
+    flex-direction: column;
+    width: 45%;
+    display: inline-block;
+  }
+
+  .cuestionarios .articuloCuestionario .jugarCuestionario {
+    justify-content: center;
+  }
+
+  .infoCuestionario {
+    flex-direction: column;
+  }
+
+  .infoCuestionario h4 {
+    font-size: 0.8em;
+  }
+
+  .infoCuestionario {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .creadorCuestionario {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .jugarCuestionario {
+    width: 100%;
+  }
+
+  #categoria {
+    display: block;
+  }
+}

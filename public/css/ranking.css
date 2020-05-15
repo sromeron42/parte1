@@ -1,0 +1,69 @@
+.tituloRanking {
+  font-size: 0.8em;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+table {
+  text-align: center;
+  font-size: 1em;
+  border: 1px solid rgba(216, 221, 215, 0.73);
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+}
+
+table th, td {
+  border: 1px solid rgba(216, 221, 215, 0.73);
+}
+
+.lineaPar {
+  background-color: #d6dfd2;
+}
+
+#botonBorrar {
+  border: none;
+  background-color: white;
+  color: #4FC99C;
+  text-decoration: underline;
+}
+
+#botonRegresar {
+  margin-top: 20px;
+  border: 1px solid lightgrey;
+  font-size: 1.2em;
+  color: grey;
+  padding: 10px 10px;
+  margin-left: 2%;
+  text-align: center;
+  background-color: rgba(216, 221, 215, 0.33);
+  text-decoration: none;
+}
+
+.botonMenu {
+  text-align: center; 
+}
+
+@media (max-width: 636px) {
+  div.cuestionarioRanking {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .cuestionarioRanking .articuloCuestionario .jugarCuestionario {
+    justify-content: center;
+  }
+
+  .cuestionarioRanking .articuloCuestionario .creadorCuestionario {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.cuestionarioRanking .articuloCuestionario {
+    width: 100% !important;
+  }
+}

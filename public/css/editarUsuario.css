@@ -1,0 +1,78 @@
+#mainInfoUsuario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#cartaUsuarioEditar {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 50%;
+  border-top: none;
+  border-left: none;
+  padding: 2% 5% 2% 5%;
+  -webkit-box-shadow: 0 7px 4px #777;
+	-moz-box-shadow: 0 7px 4px #777;
+	box-shadow: 0 7px 4px #777;
+  border-radius: 40px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+#infoUsuarioEditar {
+  width: 100%;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#infoUsuarioEditar a.botonMenu {
+  float: right;
+  margin-bottom: 20px;
+}
+
+#fotoUsuarioPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  max-width: 40%;
+  border-radius: 100%;
+}
+
+#fotoUsuarioPerfil img {
+  background-color: green;
+  max-width: 100%;
+  border-radius: 100%;
+}
+
+.grupoLIYEditar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.grupoLIYEditar input {
+  height: 40px;
+  width: 100%;
+  background-color: rgba(216, 221, 215, 0.33);
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 2px solid rgba(216, 221, 215, 0.73);
+  font-size: 1.2em;
+  padding-left: 4px;
+}
+
+#infoUsuarioEditar button {
+  width: 100%;
+  background-color: rgba(216, 221, 215, 0.33);
+  border-color: rgba(216, 221, 215, 0.73);
+  font-size: 1.2em;
+}

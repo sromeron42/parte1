@@ -1,0 +1,73 @@
+#mainInfoUsuario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#cartaUsuario {
+  display: flex;
+  background-color: white;
+  border-top: none;
+  border-left: none;
+  padding: 5%;
+  -webkit-box-shadow: 0 7px 4px #777;
+	-moz-box-shadow: 0 7px 4px #777;
+	box-shadow: 0 7px 4px #777;
+  border-radius: 40px;
+
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.33);
+}
+
+#configuracionUsuario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+#fotoUsuarioPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.infoUsuarioPerfil {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoUsuarioPerfil p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 735px) {
+  #cartaUsuario {
+    flex-direction: column;
+  }
+
+  #info {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.33);
+  }
+
+  #configuracionUsuario {
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+}

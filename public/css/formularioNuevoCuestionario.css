@@ -1,0 +1,253 @@
+/*Clase para JS*/
+.aquiTaH {
+  width: 90% !important;
+  color: black !important;
+}
+
+.aquiTaV {
+  max-height: 15em !important;
+  opacity: 1 !important;
+  -webkit-box-shadow: -9px 0px 1px 0px rgba(112,112,112,0.31) !important;
+  -moz-box-shadow: -9px 0px 1px 0px rgba(112,112,112,0.31) !important;
+  box-shadow: -9px 0px 1px 0px rgba(112,112,112,0.31) !important;
+}
+
+/*Main creacion cuestionario*/
+#mainCreacionCuestinario {
+  display: flex;
+  height: 100vh;
+  font-size: 1.4em;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/*Seccion izquierda*/
+#seccionIzquierdaCC {
+  position: absolute;
+  padding: 1%;
+  width: 73vw;
+
+}
+
+#seccionPreguntasYRespuestas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pregunta {
+  width: 0;
+  position: relative;
+  padding: 2%;
+  border: 2px solid #707070;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  max-height:20px;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  color: white;
+}
+
+.borrarPregunta {
+  position: absolute;
+  top: 4%;
+  right: 2%;
+}
+
+.borrarPregunta i {
+  font-size: 1.2em;
+  color: #C94F74;
+}
+
+.preguntaCarta input {
+  font-size: 1.2em;
+  border: none;
+  border-bottom: 2px dashed #4FC99C;
+  margin-bottom: 20px;
+}
+
+.respuestas p {
+  margin-bottom: 14px;
+}
+
+.respuestas p span {
+  font-size: 0.4em;
+  font-style: italic;
+}
+
+.respuestas > div {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+}
+
+.respuestas div input {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  font-size: 0.8em;
+  border: none;
+  border-left: 8px solid #C94F74;
+  background-color: rgba(201, 80, 117, 0.18);
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.respuestas div input:nth-of-type(1) {
+  border-left: 8px solid #4FC99C;
+  background-color: rgba(80, 201, 156, 0.18);
+}
+
+.inputRadio {
+  display: inline !important;
+}
+
+.inputRadio .radioInput {
+  display: inline;
+}
+
+/*Seccion derecha*/
+#seccionDerechaCC {
+  position: fixed;
+  height: 100%;
+  width: 27vw;
+  right: 0;
+  min-width: 279px;
+  background-color: white;
+  padding: 1%;
+  border-left: 2px solid #707070;
+  -webkit-box-shadow: -9px 0px 1px 0px rgba(112,112,112,0.31);
+  -moz-box-shadow: -9px 0px 1px 0px rgba(112,112,112,0.31);
+  box-shadow: -9px 0px 1px 0px rgba(112,112,112,0.31);
+  transition: 1s;
+}
+
+.ocultarMenu {
+  right: 0px !important;
+}
+
+#desplegarMenu {
+  display: none;
+}
+
+#desplegarMenu i {
+  color: white;
+}
+
+#seccionDerechaCC label {
+  color: #707070;
+}
+
+#seccionDerechaCC #formDerecho {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#seccionDerechaCC div.grupoLI, #seccionIzquierdaCC div.grupoLI {
+  display: flex;
+  flex-direction: column;
+}
+
+#seccionDerechaCC div.grupoLI input, textarea {
+  font-size: 0.8em;
+  border: none;
+  border-left: 8px solid #4FC99C;
+  background-color: rgba(80, 201, 156, 0.18);
+  padding: 4px;
+}
+
+#seccionDerechaCC textarea {
+  resize: none;
+}
+
+#seccionDerechaCC select {
+  width: 40%;
+  color: #707070;
+}
+
+#seccionDerechaCC select {
+  font-size: 0.8em;
+}
+
+#seccionDerechaCC hr {
+  border: 1px dashed #707070;;
+  width: 100%;
+}
+
+#botonesCC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+#botonesCC button {
+  border: none;
+  padding: 10px;
+  color: white;
+  font-size: 0.65em;
+  cursor: pointer;
+}
+
+.divBorrarCuestionario {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  font-size: 2em;
+}
+
+#botonesCC h4 {
+  color: #707070;
+  margin-top: 10px;
+}
+
+#botonesCC div + div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+#botonesCC button:nth-of-type(1) {
+  background-color: #4FC99C;
+}
+
+#botonesCC button:nth-of-type(2) {
+  background-color: #C94F74;
+}
+
+#seccionDerechaCC button[type="submit"] {
+  font-size: 1.2em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  background-color: #4FC99C;
+  color: white;
+}
+
+@media (max-width: 950px) {
+  #seccionDerechaCC {
+    right: -280px;
+    z-index: 1;
+  }
+
+  #seccionIzquierdaCC {
+    width: 100vw;
+    z-index: 0;
+  }
+
+  #desplegarMenu {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -40px;
+    background-color: #4FC99C;
+    padding: 20px 10px 20px 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
