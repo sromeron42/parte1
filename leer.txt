@@ -1,0 +1,15 @@
+1)composer create-project laravel/laravel parte1
+
+2)composer update cada vez que baje el proyecto de git
+
+3)php artisan key:generate para crear clave de encripcion.
+
+4)activar servidor php artisan serve.
+
+5)crear controlador: php artisan make:controller PeliculasController
+
+6)configurar archivo .env para conexion bd
+
+7)crear modelo: php artisan make:model Pelicula
+
+8)php artisan storage:link crea carpetas donde tengo las imagenes.
