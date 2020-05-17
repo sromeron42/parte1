@@ -11,6 +11,10 @@
       @forelse ($peliculas as $pelicula)
         <li>
           <p>{{$pelicula->title}}</p>
+          @if ($pelicula->genero)
+          <p>Genero: {{$pelicula->genero->name}} </p>
+          @endif
+
           @unless ($pelicula->rating < 8)
             <p>EXCELENTE</p>
           @endunless
@@ -21,6 +25,6 @@
       </p>
       @endforelse
     </ul>
-    
+
   </body>
 </html>

@@ -25,3 +25,5 @@ Route::get("/agregarPelicula", function (){
 Route::post("/agregarPelicula", "PeliculasController@agregar");
 
 Route::post("/borrarPelicula", "PeliculasController@borrar");
+
+Route::get("/generos", "GenerosController@listado");
