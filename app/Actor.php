@@ -15,4 +15,7 @@ class Actor extends Model
     return $this->first_name . "" . $this->last_name;
   }
 
+  public function peliculas(){
+    return $this->belongsToMany("App\Pelicula", "actor_movie", "actor_id" , "movie_id");
+  }
 }

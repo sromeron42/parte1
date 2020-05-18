@@ -15,6 +15,14 @@
           <p>Genero: {{$pelicula->genero->name}} </p>
           @endif
 
+          <p>Actores:</p>
+          <ul>
+            @foreach ($pelicula->actores as $actor)
+            <li>
+              {{$actor->getNombreCompleto()}}
+            </li>
+            @endforeach
+          </ul>
           @unless ($pelicula->rating < 8)
             <p>EXCELENTE</p>
           @endunless

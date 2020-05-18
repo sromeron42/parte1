@@ -15,4 +15,8 @@ class Pelicula extends Model
       return $this -> belongsTo("App\Genero", "genre_id" ); //una pelicula pertenece a un genero, devuelve objeto de tipo genero
     }
 
+    public function actores(){
+      return $this->belongsToMany("App\Actor", "actor_movie", "movie_id" , "actor_id");
+    }
+
 }

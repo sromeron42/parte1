@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Pelicula; //aclaro que objeto de la bd voy a usar
 
+use DB;
+
 class PeliculasController extends Controller
 {
     public function listado(){
@@ -81,6 +83,21 @@ class PeliculasController extends Controller
       return redirect("/peliculas");
     }
 
+    public function random(){
+      $peliculas = Pelicula::all()->random(5);
+      $ultimas = DB::table("movies")->orderBy("created_at" , "desc")->limit(5)->get();
+      $ultpelis = compact("ultimas");
+      $randoms = compact("peliculas");
+      //dd($randoms);
+      return view("paginaprincipal", $randoms , $ultpelis);
+    }
 
+    public function buscar(Request $req){
+      $nombre = $req["nombre"];
+      $peliculas = Pelicula::where("title", "LIKE", "%" . $nombre . "%")->get();
+      $bus = compact ("peliculas");
+      //dd($peliculas);
+      return view("listadopelicula", $bus);
+    }
 
 }

@@ -27,3 +27,11 @@ Route::post("/agregarPelicula", "PeliculasController@agregar");
 Route::post("/borrarPelicula", "PeliculasController@borrar");
 
 Route::get("/generos", "GenerosController@listado");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/random', "PeliculasController@random");
+
+Route::get("/buscar", "PeliculasController@buscar");
