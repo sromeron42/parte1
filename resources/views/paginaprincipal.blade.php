@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Listado de peliculas</title>
+    <title>Pagina Principal</title>
     <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
-    <h1>Mis peliculas</h1>
+    <h1>Peliculas Random</h1>
     <ul>
             @foreach ($peliculas as $pelicula)
             <li>
@@ -14,6 +14,7 @@
             </li>
             @endforeach
     </ul>
+    <h1>Últimas peliculas agregadas</h1>
     <ul>
             @foreach ($ultimas as $ultima)
             <li>
@@ -21,11 +22,5 @@
             </li>
             @endforeach
     </ul>
-
-    <form method="get" action="/buscar">
-      {{csrf_field()}}
-      <input type="Text" name="nombre"/>
-      <buttom value="enviar"/>
-    </form>
   </body>
 </html>

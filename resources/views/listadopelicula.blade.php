@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
-    <h1>Mis peliculas</h1>
+    <h1>Pelicula</h1>
     <ul>
       @forelse ($peliculas as $pelicula)
         <li>
@@ -23,9 +23,6 @@
             </li>
             @endforeach
           </ul>
-          @unless ($pelicula->rating < 8)
-            <p>EXCELENTE</p>
-          @endunless
         </li>
       @empty
       <p>

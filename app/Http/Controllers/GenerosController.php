@@ -9,9 +9,9 @@ use App\Genero;
 class GenerosController extends Controller
 {
   public function listado(){
-    $generos = Genero::all(); //mostrar todas las peliculas
+    $generos = Genero::paginate(5); //muestra cierta cantidad de actores
 
     $vac = compact("generos");
-    return view ("listadogeneros", $vac);
+    return view ("titulos", $vac);
   }
 }

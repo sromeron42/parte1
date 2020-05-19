@@ -13,3 +13,5 @@
 7)crear modelo: php artisan make:model Pelicula
 
 8)php artisan storage:link crea carpetas donde tengo las imagenes.
+
+9)php artisan make:migration

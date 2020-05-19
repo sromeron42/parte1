@@ -6,12 +6,20 @@
     <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
+
+    <br>
+    <form method="get" action="/buscar">
+      {{csrf_field()}}
+      Pelicula que desea buscar:<input type="Text" name="nombre"/>
+      <buttom value="enviar"/>
+    </form>
+    <br>
+
     <h1>Generos</h1>
     <ul>
       @foreach ($generos as $genero)
           <li>
           {{$genero->name}}
-          Peliculas:
           <ul>
             @foreach ($genero->peliculas as $pelicula)
               <li>
@@ -22,5 +30,6 @@
           </li>
       @endforeach
     </ul>
+{{$generos->links()}} <!-- genera hipervinculos barra de navegacion -->
   </body>
 </html>

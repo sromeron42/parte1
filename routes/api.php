@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get("/peliculas", "PeliculasController@listadoAPI"); //punto 9
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

@@ -26,14 +26,6 @@ class PeliculasController extends Controller
       return view("detallePelicula", $vac);
     }
 
-    public function top(){
-      $peliculas = Pelicula::where("rating", ">" , 5 ) //mostrar peliculas con filtro
-      ->orderBy("title")
-      ->get();
-      $vac = compact("peliculas");
-      return view("listadopelicula", $vac);
-    }
-
     /////////////////////////////////VALIDAR////////////////////////////////////
 
     public function agregar(Request $req){ //recibe info de formulario
@@ -100,4 +92,8 @@ class PeliculasController extends Controller
       return view("listadopelicula", $bus);
     }
 
+    public function listadoAPI(){
+      $peliculas = Pelicula::all();
+      return json_encode($peliculas);
+    }
 }
