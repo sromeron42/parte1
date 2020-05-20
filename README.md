@@ -7,6 +7,14 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Guia de instalacion
+
+1)incorporar base de datos movies_db que se encuentra dentro de la carpeta "parte 1"
+2)incluir el proyecto utilizando git clone https://github.com/sromeron42/parte1.git en consola
+3)instalar composer
+4)ejecutar el comando composer update dentro de la carpeta que contiene el proyecto
+5)crear archivo .env dentro de la carpeta del proyecto y configurarlo.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
