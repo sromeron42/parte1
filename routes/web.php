@@ -11,7 +11,7 @@ Route::get("/peliculas", "PeliculasController@listado");
 Route::get("/pelicula/{id}" , "PeliculasController@detalle"); // punto 5
 
 Route::get("/agregarPelicula", function (){ //punto 7
-  return view("agregarPelicula");
+return view("agregarPelicula");
 })->Middleware("auth"); // punto 8
 
 Route::post("/agregarPelicula", "PeliculasController@agregar");

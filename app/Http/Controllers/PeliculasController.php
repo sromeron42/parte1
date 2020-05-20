@@ -32,19 +32,20 @@ class PeliculasController extends Controller
 
       $reglas = [
         "title" => "string|min:3|unique:movies,title",
-        "awards" => "integer|min:0",
-        "release_date" => "date",
         "rating" => "numeric|min:0|max:10",
-        "poster" => "file"
+        "awards" => "integer|min:0",
+        "release_date" => "date"
       ];
 
       $mensajes = [
-        "string" => "el campo :attribute debe ser un texto", //:attribute placeholder
-        "min" => "el campo :attribute tiene un minimo de :min",
-        "max" => "el campo :attribute tiene un maximo de :max",
-        "date" => "el campo :attribute debe ser una fecha",
-        "numeric" => "EL campo :attribute debe ser un número entero",
-        "unique" => "el campo :attribute se encuentra repetido"
+
+        "string" => "El campo titulo debe ser un texto", //:attribute placeholder
+        "min" => "El campo titulo tiene un mínimo de :min caracteres",
+        "max" => "El campo titulo tiene un míximo de :max caracteres",
+        "date" => "El campo fecha_estreno debe ser una fecha",
+        "numeric" => "El campo :attribute debe ser un número",
+        "unique" => "El campo :attribute se encuentra repetido",
+        "integer" => "El campo premio debe ser un número"
       ];
 
       $this->validate($req, $reglas, $mensajes); //metodo que se usa para validar
@@ -53,10 +54,6 @@ class PeliculasController extends Controller
 
       $peliculaNueva = new Pelicula(); //creacion del objeto de la nueva pelicula
 
-      $ruta = $req->file("poster")->store("public"); //archivo que devuelve una ruta
-      $nombreArchivo = basename($ruta);
-
-      $peliculaNueva->poster = $nombreArchivo;
       $peliculaNueva->title = $req["title"]; // campos que vamos a rellenar
       $peliculaNueva->rating = $req["rating"]; // campos que vamos a rellenar
       $peliculaNueva->awards = $req["awards"]; // campos que vamos a rellenar
